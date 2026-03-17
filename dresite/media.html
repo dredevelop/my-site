@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      color: #555;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .copy-btn {
+      background-color: #7289da;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      margin: 5px;
+    }
+
+    .copy-btn:hover {
+      background-color: #5b6eae;
+      transform: scale(1.05);
+    }
+
+    .back-btn {
+      background-color: #1e90ff;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      margin-top: 20px;
+      text-decoration: none;
+    }
+
+    .back-btn:hover {
+      background-color: #0d6efd;
+      transform: scale(1.05);
+    }
+
+    .more-soon {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Contact</h1>
+  <button class="copy-btn" onclick="copyDiscord()">Discord</button>
+  <div class="more-soon">More soon.</div>
+  <a href="index.html" class="back-btn">Back</a>
+
+  <script>
+    function copyDiscord() {
+      const text = 'drethedevone';
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Discord copied: ' + text);
+      }).catch(err => {
+        alert('Failed to copy to clipboard.');
+      });
+    }
+  </script>
+
+</body>
+</html>
