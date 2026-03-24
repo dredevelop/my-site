@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Cookie Clicker</title>
+    <style>
+          body {
+                  text-align: center;
+                  font-family: Arial;
+                  background: #222;
+                  color: white;
+          }
+
+          button {
+                  padding: 15px 30px;
+                  font-size: 20px;
+                  margin: 10px;
+                  cursor: pointer;
+          }
+        </style>
+  </head>
+  <body>
+
+      <h1>🍪 Cookie Clicker</h1>
+  
+    <h2 id="points">Points: 0</h2>
+    <h3 id="multi">Multiplier: 1</h3>
+  
+    <button onclick="clickCookie()">Click Cookie 🍪</button>button>
+    <br>
+    <button onclick="buyUpgrade()">Buy Upgrade</button>button>
+  
+  <script>
+      let points = 0;
+      let multiplier = 1;
+      let upgradeCost = 10;
+
+      function updateUI() {
+            document.getElementById("points").innerText = "Points: " + points;
+            document.getElementById("multi").innerText =
+                    "Multiplier: " + multiplier + " (Cost: " + upgradeCost + ")";
+      }
+
+      function clickCookie() {
+            points += multiplier;
+            updateUI();
+      }
+
+      function buyUpgrade() {
+            if (points >= upgradeCost) {
+                    points -= upgradeCost;
+                    multiplier++;
+                    upgradeCost = Math.floor(upgradeCost * 1.5);
+                    updateUI();
+            } else {
+          alert("Not enough cookies 😭");
+            }
+      }
+
+      updateUI();
+  </script>
+
+  </body>
+</html>html>
+  </script></h1>
+  </body>
+    </style></title>
+  </head>
